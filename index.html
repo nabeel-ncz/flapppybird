@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird</title>
+    <meta name="description" content="Play the classic Flappy Bird game - a fun and addictive side-scrolling game where you navigate a bird through pipes.">
+    <meta name="keywords" content="flappy bird, game, online game, browser game, arcade game">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Flappy Bird - Free Online Game">
+    <meta property="og:description" content="Play the classic Flappy Bird game in your browser. Tap or press space to navigate through pipes!">
+    <meta property="og:image" content="assets/bird.png">
+    <meta property="og:type" content="website">
+    <title>Flappy Bird - Free Online Game | Play Now</title>
     <link rel="icon" type="image/png" href="assets/bird.png">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/bird.png" as="image">
 </head>
 <body>
-    <div id="bg-overlay"></div>
+    <div id="bg-overlay" role="presentation"></div>
     <h1 id="title">Flappy Bird</h1>
-    <div id="instructions">Press <b>Space</b> or <b>Tap</b> to Flap!</div>
-    <canvas id="gameCanvas" width="450" height="600"></canvas>
+    <div id="instructions" aria-label="Game instructions">Press <b>Space</b> or <b>Tap</b> to Flap!</div>
+    <canvas id="gameCanvas" width="450" height="600" aria-label="Flappy Bird game area"></canvas>
     <audio id="flapSound" src="assets/flap.wav" preload="auto"></audio>
     <audio id="scoreSound" src="assets/score.wav" preload="auto"></audio>
     <audio id="hitSound" src="assets/hit.wav" preload="auto"></audio>
     <script src="game.js"></script>
 </body>
-</html> 
+</html>
